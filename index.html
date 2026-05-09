@@ -1,155 +1,373 @@
-export default function NusaTerapiHerbalLandingPage() {
-  return (
-    <div className="min-h-screen bg-[#f5ecd7] text-[#123524] overflow-hidden font-sans">
-      {/* HERO */}
-      <section className="relative bg-gradient-to-br from-[#0b2f1e] via-[#14532d] to-[#1d6b42] text-white px-6 md:px-20 py-20">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center"></div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nusa Terapi Herbal</title>
 
-        <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-          <div>
-            <div className="inline-block bg-[#f3c95f] text-[#123524] px-5 py-2 rounded-full font-bold mb-6 shadow-xl">
-              100% HERBAL ALAMI
-            </div>
+<style>
 
-            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-              Nusa <br />
-              <span className="text-[#f3c95f]">Terapi Herbal</span>
-            </h1>
-
-            <p className="text-xl md:text-2xl text-green-100 leading-relaxed mb-8">
-              Minyak pijat herbal premium untuk membantu meredakan pegal linu,
-              nyeri otot, dan memberikan sensasi hangat nyaman pada tubuh.
-            </p>
-
-            <div className="flex flex-wrap gap-4 mb-10">
-              <a
-                href="https://wa.me/6289646836064"
-                className="bg-[#f3c95f] hover:scale-105 transition-all text-[#123524] px-8 py-4 rounded-2xl font-bold shadow-2xl"
-              >
-                Order via WhatsApp
-              </a>
-
-              <button className="border border-white/30 px-8 py-4 rounded-2xl hover:bg-white/10 transition-all">
-                Lihat Khasiat
-              </button>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                ['🔥', 'Hangat Nyaman'],
-                ['🌿', 'Herbal Alami'],
-                ['💆', 'Relaksasi'],
-                ['💧', 'Tidak Lengket'],
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-white/10 backdrop-blur-md rounded-2xl p-4 text-center border border-white/10"
-                >
-                  <div className="text-3xl mb-2">{item[0]}</div>
-                  <p className="font-semibold text-sm">{item[1]}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="relative flex justify-center">
-            <div className="absolute w-[450px] h-[450px] bg-[#f3c95f]/30 rounded-full blur-3xl"></div>
-
-            <img
-              src="https://images.unsplash.com/photo-1608571423539-e951a5a6fd9f?q=80&w=1200&auto=format&fit=crop"
-              alt="produk herbal"
-              className="relative rounded-[2rem] shadow-[0_20px_80px_rgba(0,0,0,0.5)] border-4 border-[#f3c95f]/30"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* BENEFITS */}
-      <section className="py-24 px-6 md:px-20 bg-[#f8f1df]">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-5xl font-black text-[#123524] mb-5">
-            Khasiat & Manfaat
-          </h2>
-
-          <p className="text-xl text-[#355d49] max-w-3xl mx-auto mb-16">
-            Membantu tubuh lebih nyaman dan rileks dengan sensasi herbal alami premium.
-          </p>
-
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {[
-              ['💪', 'Redakan Pegal'],
-              ['🩸', 'Lancarkan Darah'],
-              ['😴', 'Tidur Nyenyak'],
-              ['🌿', 'Aroma Menenangkan'],
-              ['✨', 'Tubuh Lebih Fresh'],
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-[2rem] p-8 shadow-xl hover:-translate-y-2 transition-all"
-              >
-                <div className="text-5xl mb-5">{item[0]}</div>
-                <h3 className="text-xl font-bold text-[#123524]">{item[1]}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONI */}
-      <section className="bg-gradient-to-b from-[#123524] to-[#0b2f1e] py-24 px-6 md:px-20 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black mb-4">Testimoni Pelanggan</h2>
-            <p className="text-xl text-green-100">
-              Sudah dipakai banyak pelanggan di seluruh Indonesia.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              ['Budi', 'Badan jadi ringan setelah dipijat.'],
-              ['Rina', 'Hangatnya pas dan nyaman banget.'],
-              ['Sari', 'Aroma herbalnya bikin rileks.'],
-              ['Agus', 'Pegal cepat berkurang.'],
-              ['Dewi', 'Tidak lengket di kulit.'],
-              ['Fajar', 'Enak dipakai malam hari.'],
-              ['Maya', 'Wanginya premium banget.'],
-              ['Andi', 'Tubuh terasa lebih fresh.'],
-              ['Nina', 'Kualitas minyaknya bagus.'],
-              ['Hendra', 'Cocok untuk keluarga.'],
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-white text-[#123524] rounded-[2rem] p-6 shadow-2xl"
-              >
-                <div className="text-[#f3c95f] text-2xl mb-3">★★★★★</div>
-                <p className="mb-4 italic">“{item[1]}”</p>
-                <h4 className="font-bold">{item[0]}</h4>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 px-6 md:px-20 bg-[#f3c95f] text-[#123524] text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-black mb-6">
-            Rasakan Hangat Alami Sekarang
-          </h2>
-
-          <p className="text-2xl mb-10 leading-relaxed">
-            Solusi herbal premium untuk membantu tubuh lebih nyaman, rileks, dan segar setiap hari.
-          </p>
-
-          <a
-            href="https://wa.me/6289646836064"
-            className="inline-block bg-[#123524] text-white px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl hover:scale-105 transition-all"
-          >
-            Chat WhatsApp Sekarang
-          </a>
-        </div>
-      </section>
-    </div>
-  );
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
+
+body{
+background:#f6eed9;
+color:#123524;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(to bottom,#0b2f1e,#14532d);
+padding:70px 8%;
+color:white;
+text-align:center;
+position:relative;
+}
+
+.logo{
+width:140px;
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:65px;
+color:#f6d36a;
+margin-bottom:10px;
+}
+
+.hero h2{
+font-size:28px;
+margin-bottom:25px;
+font-weight:normal;
+}
+
+.hero p{
+max-width:800px;
+margin:auto;
+font-size:22px;
+line-height:1.7;
+margin-bottom:40px;
+}
+
+.product{
+width:340px;
+max-width:100%;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+margin-top:20px;
+}
+
+/* BUTTON */
+
+.btn-wa{
+display:inline-block;
+background:#22c55e;
+padding:18px 40px;
+border-radius:50px;
+color:white;
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+margin-top:25px;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.btn-wa:hover{
+transform:scale(1.05);
+}
+
+/* BENEFITS */
+
+.section{
+padding:80px 8%;
+text-align:center;
+}
+
+.section h2{
+font-size:50px;
+margin-bottom:20px;
+color:#0b2f1e;
+}
+
+.section p{
+font-size:22px;
+max-width:900px;
+margin:auto;
+line-height:1.8;
+}
+
+.benefits{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card h3{
+margin-top:15px;
+font-size:24px;
+}
+
+/* TESTIMONI */
+
+.testimoni{
+background:#123524;
+color:white;
+}
+
+.testi-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.testi{
+background:white;
+color:#123524;
+padding:30px;
+border-radius:25px;
+text-align:left;
+}
+
+.stars{
+color:gold;
+font-size:22px;
+margin-bottom:15px;
+}
+
+/* PRICE */
+
+.price{
+background:linear-gradient(to right,#f6d36a,#f4c542);
+padding:90px 8%;
+text-align:center;
+}
+
+.price h2{
+font-size:55px;
+margin-bottom:20px;
+color:#123524;
+}
+
+.old{
+font-size:35px;
+text-decoration:line-through;
+color:red;
+margin-bottom:15px;
+}
+
+.new{
+font-size:70px;
+font-weight:bold;
+color:#0b2f1e;
+margin-bottom:30px;
+}
+
+/* FOOTER */
+
+footer{
+background:#0a1f15;
+padding:40px;
+text-align:center;
+color:white;
+font-size:18px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:45px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section h2{
+font-size:38px;
+}
+
+.new{
+font-size:50px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<img class="logo"
+src="https://i.imgur.com/3ZQ3Z6F.png">
+
+<h1>Nusa Terapi Herbal</h1>
+
+<h2>Minyak Pijat Herbal Premium</h2>
+
+<p>
+Membantu meredakan pegal linu, nyeri otot,
+melancarkan peredaran darah, dan memberikan
+sensasi hangat nyaman pada tubuh.
+</p>
+
+<img class="product"
+src="https://i.imgur.com/z5KXx1P.png">
+
+<br>
+
+<a class="btn-wa"
+href="https://wa.me/6289646836064">
+ORDER VIA WHATSAPP
+</a>
+
+</section>
+
+<!-- KHASIAT -->
+
+<section class="section">
+
+<h2>Khasiat & Manfaat</h2>
+
+<p>
+Diracik dari bahan herbal alami pilihan
+yang membantu tubuh terasa lebih rileks,
+nyaman, dan segar setelah aktivitas harian.
+</p>
+
+<div class="benefits">
+
+<div class="card">
+🔥
+<h3>Hangat Nyaman</h3>
+</div>
+
+<div class="card">
+🌿
+<h3>Herbal Alami</h3>
+</div>
+
+<div class="card">
+💪
+<h3>Redakan Pegal</h3>
+</div>
+
+<div class="card">
+💆
+<h3>Relaksasi Tubuh</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONI -->
+
+<section class="section testimoni">
+
+<h2 style="color:white;">
+Kesaksian Pelanggan
+</h2>
+
+<div class="testi-grid">
+
+<div class="testi">
+<div class="stars">★★★★★</div>
+Badan jadi lebih ringan setelah dipakai pijat.
+<br><br>
+<b>Rina - Bandung</b>
+</div>
+
+<div class="testi">
+<div class="stars">★★★★★</div>
+Hangatnya pas dan nyaman di kulit.
+<br><br>
+<b>Budi - Jakarta</b>
+</div>
+
+<div class="testi">
+<div class="stars">★★★★★</div>
+Aroma herbalnya bikin rileks banget.
+<br><br>
+<b>Sari - Surabaya</b>
+</div>
+
+<div class="testi">
+<div class="stars">★★★★★</div>
+Pegal setelah kerja langsung berkurang.
+<br><br>
+<b>Agus - Bekasi</b>
+</div>
+
+<div class="testi">
+<div class="stars">★★★★★</div>
+Recommended untuk keluarga di rumah.
+<br><br>
+<b>Dewi - Jogja</b>
+</div>
+
+<div class="testi">
+<div class="stars">★★★★★</div>
+Tidak lengket dan cepat meresap.
+<br><br>
+<b>Andi - Bali</b>
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICE -->
+
+<section class="price">
+
+<h2>PROMO SPESIAL HARI INI</h2>
+
+<div class="old">
+Rp175.000
+</div>
+
+<div class="new">
+Rp110.000
+</div>
+
+<p style="font-size:24px;margin-bottom:35px;">
+Promo terbatas sebelum harga normal kembali.
+Segera order sekarang juga!
+</p>
+
+<a class="btn-wa"
+href="https://wa.me/6289646836064">
+CHAT WHATSAPP SEKARANG
+</a>
+
+</section>
+
+<footer>
+
+© 2026 Nusa Terapi Herbal  
+Terapi Herbal Alami untuk Keluarga
+
+</footer>
+
+</body>
+</html>
