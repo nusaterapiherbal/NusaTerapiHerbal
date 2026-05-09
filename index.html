@@ -1,123 +1,430 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nusa Terapi Herbal</title>
-  <style>
-    body{
-      margin:0;
-      font-family:Arial,sans-serif;
-      background:#0f3b2e;
-      color:white;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nusa Terapi Herbal</title>
 
-    .hero{
-      padding:60px 20px;
-      text-align:center;
-      background:linear-gradient(to bottom,#0f3b2e,#14532d);
-    }
+<style>
 
-    .hero h1{
-      font-size:48px;
-      margin-bottom:10px;
-      color:#facc15;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-    .hero p{
-      font-size:20px;
-      max-width:700px;
-      margin:auto;
-    }
+body{
+background:#f7f1df;
+color:#123b24;
+}
 
-    .btn{
-      display:inline-block;
-      margin-top:30px;
-      padding:15px 30px;
-      background:#facc15;
-      color:#0f3b2e;
-      text-decoration:none;
-      border-radius:12px;
-      font-weight:bold;
-    }
+header{
+background:linear-gradient(to right,#012b16,#0b5d33);
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
 
-    .section{
-      padding:50px 20px;
-      text-align:center;
-    }
+.logo{
+font-size:38px;
+font-weight:bold;
+color:#f8d25c;
+}
 
-    .benefits{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-      max-width:1000px;
-      margin:auto;
-    }
+.logo span{
+display:block;
+font-size:18px;
+color:#d4ffcb;
+}
 
-    .card{
-      background:white;
-      color:#14532d;
-      padding:25px;
-      border-radius:20px;
-    }
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+}
 
-    footer{
-      text-align:center;
-      padding:30px;
-      background:#09251d;
-    }
-  </style>
+.whatsapp-btn{
+background:#1fae4b;
+padding:14px 28px;
+border-radius:40px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.hero{
+padding:80px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:40px;
+background:linear-gradient(to bottom,#f7f1df,#f4e8c5);
+}
+
+.hero h1{
+font-size:85px;
+line-height:0.95;
+margin-bottom:20px;
+color:#06351d;
+}
+
+.hero h2{
+font-size:28px;
+margin-bottom:20px;
+background:#0f5a2d;
+color:white;
+display:inline-block;
+padding:10px 20px;
+border-radius:30px;
+}
+
+.hero p{
+font-size:22px;
+line-height:1.7;
+margin-bottom:30px;
+}
+
+.hero img{
+width:100%;
+border-radius:30px;
+}
+
+.icons{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:40px;
+text-align:center;
+}
+
+.icon-box{
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.section-title{
+text-align:center;
+font-size:50px;
+margin-bottom:50px;
+color:#0b4d2a;
+}
+
+.benefits{
+padding:80px 8%;
+background:white;
+}
+
+.benefit-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:20px;
+}
+
+.benefit-card{
+background:#f7f1df;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.benefit-card h3{
+margin-top:15px;
+font-size:22px;
+}
+
+.testimonials{
+padding:80px 8%;
+background:linear-gradient(to bottom,#0d3d23,#012b16);
+color:white;
+}
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:20px;
+}
+
+.testimonial{
+background:white;
+color:#123b24;
+padding:25px;
+border-radius:20px;
+}
+
+.testimonial h4{
+margin-top:15px;
+font-size:18px;
+}
+
+.stars{
+color:gold;
+font-size:20px;
+margin-bottom:15px;
+}
+
+footer{
+background:#01180d;
+color:white;
+padding:50px 8%;
+text-align:center;
+}
+
+.floating-wa{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#1fae4b;
+width:70px;
+height:70px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+color:white;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.benefit-grid,
+.testimonial-grid{
+grid-template-columns:1fr;
+}
+
+.icons{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
+<header>
+
+<div class="logo">
+Nusa
+<span>Terapi Herbal</span>
+</div>
+
+<nav>
+<a href="#">Beranda</a>
+<a href="#">Manfaat</a>
+<a href="#">Testimoni</a>
+<a href="#">Kontak</a>
+</nav>
+
+<a class="whatsapp-btn"
+href="https://wa.me/6289646836064">
+ORDER SEKARANG
+</a>
+
+</header>
+
 <section class="hero">
-  <h1>Nusa Terapi Herbal</h1>
-  <h2>Minyak Pijat Herbal Tradisional</h2>
-  <p>
-    Membantu meredakan pegal linu, nyeri otot,
-    dan memberikan sensasi hangat nyaman untuk relaksasi tubuh.
-  </p>
 
-  <a class="btn" href="https://wa.me/6281234567890">
-    Order Sekarang
-  </a>
+<div>
+
+<h2>100% HERBAL ALAMI</h2>
+
+<h1>MINYAK<br>PIJAT</h1>
+
+<p>
+Minyak pijat herbal alami untuk membantu meredakan
+pegal linu, nyeri otot, melancarkan peredaran darah,
+dan memberikan sensasi hangat nyaman pada tubuh.
+</p>
+
+<a class="whatsapp-btn"
+href="https://wa.me/6289646836064">
+Pesan WhatsApp
+</a>
+
+<div class="icons">
+
+<div class="icon-box">
+🌿<br><br>
+Bahan Herbal Alami
+</div>
+
+<div class="icon-box">
+🔥<br><br>
+Rasa Hangat Nyaman
+</div>
+
+<div class="icon-box">
+💆<br><br>
+Relaksasi Maksimal
+</div>
+
+<div class="icon-box">
+💧<br><br>
+Tidak Lengket
+</div>
+
+</div>
+
+</div>
+
+<div>
+<img src="https://i.imgur.com/z5KXx1P.png">
+</div>
+
 </section>
 
-<section class="section">
-  <h2>Khasiat & Manfaat</h2>
+<section class="benefits">
 
-  <div class="benefits">
+<h2 class="section-title">
+KHASIAT & MANFAAT
+</h2>
 
-    <div class="card">
-      <h3>🔥 Hangat Nyaman</h3>
-      <p>Membantu tubuh lebih rileks setelah aktivitas.</p>
-    </div>
+<div class="benefit-grid">
 
-    <div class="card">
-      <h3>🌿 Herbal Alami</h3>
-      <p>Diracik dari bahan herbal pilihan berkualitas.</p>
-    </div>
+<div class="benefit-card">
+💪
+<h3>Redakan Pegal</h3>
+</div>
 
-    <div class="card">
-      <h3>💆 Relaksasi</h3>
-      <p>Membantu meredakan pegal dan nyeri otot.</p>
-    </div>
+<div class="benefit-card">
+🩸
+<h3>Lancarkan Darah</h3>
+</div>
 
-  </div>
+<div class="benefit-card">
+😌
+<h3>Relaksasi Tubuh</h3>
+</div>
+
+<div class="benefit-card">
+🌙
+<h3>Tidur Lebih Nyenyak</h3>
+</div>
+
+<div class="benefit-card">
+🌿
+<h3>Herbal Alami</h3>
+</div>
+
+</div>
+
 </section>
 
-<section class="section">
-  <h2>Tersedia Ukuran</h2>
-  <p>50 ml & 100 ml</p>
+<section class="testimonials">
 
-  <a class="btn" href="https://wa.me/6281234567890">
-    Chat WhatsApp
-  </a>
+<h2 class="section-title" style="color:white;">
+TESTIMONI PELANGGAN
+</h2>
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+Minyaknya bikin badan ringan dan rileks.
+<h4>Budi - Jakarta</h4>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+Hangatnya pas dan nyaman dipakai malam hari.
+<h4>Rina - Bandung</h4>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+Aroma herbalnya bikin tenang dan enak tidur.
+<h4>Siti - Surabaya</h4>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+Pegal setelah kerja langsung berkurang.
+<h4>Agus - Bekasi</h4>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+Tidak lengket dan cepat meresap.
+<h4>Dewi - Jogja</h4>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+Dipakai pijat terasa lebih nyaman.
+<h4>Fajar - Solo</h4>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+Wangi herbalnya premium banget.
+<h4>Maya - Bali</h4>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+Badan terasa segar setelah dipakai.
+<h4>Andi - Medan</h4>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+Kualitasnya bagus dan aman di kulit.
+<h4>Nina - Malang</h4>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+Recommended untuk keluarga.
+<h4>Hendra - Semarang</h4>
+</div>
+
+</div>
+
 </section>
 
 <footer>
-  © 2026 Nusa Terapi Herbal
+
+<h2>Nusa Terapi Herbal</h2>
+
+<p>
+Terapi alami untuk keluarga sehat & bahagia
+</p>
+
+<br>
+
+<a class="whatsapp-btn"
+href="https://wa.me/6289646836064">
+Pesan Sekarang
+</a>
+
 </footer>
+
+<a class="floating-wa"
+href="https://wa.me/6289646836064">
+💬
+</a>
 
 </body>
 </html>
